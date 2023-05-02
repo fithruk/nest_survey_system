@@ -10,7 +10,6 @@ export class ResultsController {
   constructor(private resultsService: ResultsService) {}
 
   @Post("/results/permission")
-  @UseGuards(ResultsGuard)
   getPermission(@Body() permissionDto: PermissionDto) {
     return this.resultsService.getPermission(permissionDto);
   }
