@@ -9,7 +9,6 @@ export class TestQuestionsController {
   constructor(private testService: TestQuestionsService) {}
 
   @Get("/tests/all")
-  @UseGuards(TestquestionsGuard)
   getAllTests() {
     return this.testService.getAllTests();
   }
