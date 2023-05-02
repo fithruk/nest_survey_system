@@ -46,10 +46,7 @@ export class ResultsGuardAdmin implements CanActivate {
         [key: string]: any;
       };
 
-      if (
-        data.payload.exp > Math.floor(Date.now() / 1000) &&
-        data.payload.role === "admin"
-      ) {
+      if (data.payload.role === "admin") {
         return true;
       }
       return false;
